@@ -223,6 +223,9 @@ p {
 	padding: 0 50px;
 	justify-content: flex-start;
 }
+#header a h1{
+	letter-spacing: .2rem;
+}
 #hero h1 {
 	display: block;
 	width: fit-content;
@@ -310,8 +313,8 @@ p {
 	z-index: -1;
 }
 #services .service-bottom .icon {
-	height: 80px;
-	width: 80px;
+	height: 60px;
+	width: 60px;
 	margin-bottom: 20px;
 }
 #services .service-item h2 {
@@ -478,8 +481,8 @@ p {
 #contact .contact-item:hover {
 	box-shadow: 0px 0px 5px 0 #0000002c;
 }
-#contact .icon {
-	width: 70px;
+#contact .icon img{
+	width: 55px;
 	margin: 0 auto;
 	margin-bottom: 10px;
 }
@@ -498,8 +501,12 @@ section #form{
 	margin-bottom: 100px;
 	width: 100%;
 }
+#tarea {
+	font-family: 'Montserrat', sans-serif;
+}
 form ::placeholder{
-	color: rgba(255, 255, 255, 0.6);
+	letter-spacing: .3rem;
+	color: rgba(255, 255, 255, 0.7);
 }
 form input,form textarea{
 	width: 100%;
@@ -525,7 +532,7 @@ form input,form textarea{
 	padding: 15px;
 	text-transform: uppercase;
 	color: #fff;
-	border-radius: 5px;
+	border-radius: 6px;
 	cursor: pointer;
 	box-shadow: 0 0 10px rgba(0,0,0,0.1);
 
@@ -535,17 +542,19 @@ form input,form textarea{
 	box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 #successMsg{
+	margin-left: 7px;
 	font-size: 18px;
 	font-weight: 100px;
 	color: #61b752;
-	margin-top: 10px;
+	margin-top: 15px;
 	display: block;
 }
 #errorMsg{
+	margin-left: 9px;
 	font-size: 18px;
-	font-weight: 100px;
+	font-weight: 500px;
 	color: #F23639;
-	margin-top: 10px;
+	margin-top: 15px;
 	display: block;
 }
 /*End contact Section */
@@ -563,17 +572,20 @@ form input,form textarea{
 	padding-top: 50px;
 	padding-bottom: 10px;
 }
-#footer h2 {
+#footer .brand{
+	letter-spacing: .5rem;
+}
+#footer p {
 	color: white;
 	font-weight: 500;
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 	letter-spacing: .1rem;
 	margin-top: 10px;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 #footer .social-icon {
 	display: flex;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 }
 #footer .social-item {
 	height: 50px;
@@ -587,7 +599,7 @@ form input,form textarea{
 #footer .social-item:hover img {
 	filter: grayscale(0);
 }
-#footer p {
+#footer .copy {
 	color: white;
 	font-size: 1.3rem;
 }
