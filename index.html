@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="./img/titlepic.png"/>
   <title>Abdul Rehman</title>
 </head>
 <body>
@@ -150,13 +151,14 @@
         <h1 class="section-title"><span>A</span>bout <span>M</span>e</h1>
         <h2>Front End Developer</h2>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, velit alias eius non illum beatae atque repellat ratione qui veritatis repudiandae adipisci maiores. At inventore necessitatibus deserunt exercitationem cumque earum omnis ipsum rem accusantium quis, quas quia, accusamus provident suscipit magni! Expedita sint ad dolore, commodi labore nihil velit earum ducimus nulla quae nostrum fugit aut, deserunt reprehenderit libero enim!</p>
-        <a href="#" class="cta">Download Resume</a>
+        <a href="./img/Abdul-Rehman.pdf" download class="cta">Download Resume</a>
       </div>
     </div>
   </section>
   <!-- End About Section -->
 
   <!-- Contact Section -->
+  
   <section id="contact">
     <div class="contact container">
       <div><h1 class="section-title"><span>C</span>ontact <span>I</span>nfo</h1></div>
@@ -186,8 +188,25 @@
         </div>
       </div>
     </div>
+  <h1 class="section-title"><span>S</span>end <span>M</span>e <span>a</span> <span>M</span>essage</h1>
+  <section id="form">
+    <div class="form container">
+      <form name="submit-to-google-sheet">
+        <input type="text" name="Name" placeholder="Name" required>
+        <input type="text" name="Email" placeholder="Email" required>
+        <textarea name="Message" id="" cols="30" rows="10" placeholder="Message"></textarea>
+        <button type="submit" class="btn btn2">Send</button>
+        <span id="successMsg"></span><span id="errorMsg"></span>
+      </form>
+    </div>
   </section>
+</section>
+
   <!-- End Contact Section -->
+
+
+  
+
 
   <!-- Footer -->
   <section id="footer">
@@ -208,10 +227,35 @@
           <a href="#"><img src="https://img.icons8.com/bubbles/50/000000/github.png" /></a>
         </div>
       </div>
-      <p>Copyright &copy; 2021 DesDevbyAR. All rights reserved</p>
+      <p>Copyright &copy; 2023 AR. All rights reserved</p>
     </div>
   </section>
   <!-- End Footer -->
   <script src="./app.js"></script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyRD3IobB8Zpums006xx2GigIqPQ4LfWL8vRybmtfsckj6Av9BJPmk29fmMe5S_Re3g/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const SuccessMsg = document.getElementById("successMsg")
+    const ErrorMsg = document.getElementById("errorMsg")
+
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          SuccessMsg.innerHTML = "Message Sent Successfully!"
+          setTimeout(function(){
+            SuccessMsg.innerHTML = ""
+          },5000)
+          form.reset()
+        })
+        .catch(error => {
+          ErrorMsg.innerHTML = "An Error Has Occured!"
+          setTimeout(function(){
+            ErrorMsg.innerHTML = ""
+          },5000)
+        })
+    })
+  </script>
 </body>
 </html>

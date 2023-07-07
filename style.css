@@ -493,7 +493,65 @@ p {
 	line-height: 2rem;
 	font-weight: 500;
 }
+
+section #form{
+	margin-bottom: 100px;
+	width: 100%;
+}
+form ::placeholder{
+	color: rgba(255, 255, 255, 0.6);
+}
+form input,form textarea{
+	width: 100%;
+	border: 0;
+	outline: none;
+	background: #2A343E;
+	padding: 15px;
+	margin: 15px 0;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 6px;
+}
+
+.btn.btn2{
+	letter-spacing: .5rem;
+	width: 100%;
+	outline: none;
+	border: 0;
+	display: inline-block;
+	background: crimson;
+	font-size: 18px;
+	font-weight: 100px;
+	padding: 15px;
+	text-transform: uppercase;
+	color: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+
+}
+.btn.btn2:hover, .btn.btn2:focus, .btn.btn2:active{
+	box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+#successMsg{
+	font-size: 18px;
+	font-weight: 100px;
+	color: #61b752;
+	margin-top: 10px;
+	display: block;
+}
+#errorMsg{
+	font-size: 18px;
+	font-weight: 100px;
+	color: #F23639;
+	margin-top: 10px;
+	display: block;
+}
 /*End contact Section */
+
+
+
 
 /* Footer */
 #footer {
